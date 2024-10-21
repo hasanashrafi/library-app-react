@@ -14,13 +14,13 @@ function bookCard({  booksData, likedHandler}) {
         setLike((like) => !like)
     }
     return (
-        <div className='flex flex-col w-80   p-3 bg-white  rounded-md  shadow-lg m-3'>
+        <div className='flex flex-col w-80   p-3 bg-white  rounded-md  shadow-xl m-3'>
             <img src={image} className='w-full h-72 mx-auto  rounded-md' />
             <div className='my-2'>
-                <p className='text-lg text-balance text-slate-800 font-semibold text-center'>{title}</p>
+                <p className='text-lg text-balance text-text font-semibold text-center'>{title}</p>
             </div>
             <div className=''>
-                <p className=' text-gray-600 font-semibold p-1 flex items-center  gap-x-2'><LuPencilLine className='text-xl' /> {author}</p>
+                <p className=' text-text font-semibold p-1 flex items-center  gap-x-2'><LuPencilLine className='text-xl' /> {author}</p>
                 <p className='p-1 text-sm flex items-center gap-x-2' ><IoLanguage className='text-xl'/> {language}</p>
                 <p className='p-1 text-sm flex items-center gap-x-2'><MdOutlineDateRange className='text-xl' /> {year}</p>
                 <p className='p-1 text-sm flex items-center gap-x-2'><MdPlace className='text-xl' /> {country}</p>
@@ -28,10 +28,10 @@ function bookCard({  booksData, likedHandler}) {
 
             <div className='flex justify-between items-center p-1'>
                 <button onClick={ likeHandler}>
-                 <FaHeart className={`${like ? 'text-red-600' : 'text-red-200'} text-4xl`} />
+                 <FaHeart className={`${like ? 'text-secondary' : 'text-muted'} text-3xl`} />
                  </button>
 
-                <a href={link} className='p-2 bg-indigo-600 hover:bg-indigo-700 transition-all ease-in-out text-white text-center inline-block  rounded-md'>Read More</a>
+                <a href={link} className='text-sm p-2 bg-accent hover:bg-warning transition-all ease-in-out text-text text-center inline-block  rounded-md'>Read More</a>
             </div>
 
         </div>
