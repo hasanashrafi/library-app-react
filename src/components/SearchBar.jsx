@@ -4,7 +4,7 @@ function SearchBar({ search, setSearch, searchHandler }) {
     return (
         <div className='flex items-center gap-x-2'>
             <button onClick={searchHandler}>
-                <IoSearch className='text-3xl text-white'/>
+                <IoSearch className='text-3xl text-primary'/>
             </button>
             <input
                 className='p-1 outline-none rounded'
