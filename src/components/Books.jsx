@@ -56,7 +56,8 @@ function BooksPage() {
     }
     return (
         <>
-            <div className='flex justify-between items-center'>
+          <div className='  mt-4'>
+              <div className='flex justify-between items-center'>
                 <button
                     onClick={openHandler}
                     className='flex items-center gap-x-2 text-white text-lg '>
@@ -72,7 +73,7 @@ function BooksPage() {
                 <div className='my-5'>
                     {
                         !!favorites.length &&
-                        <div className="flex flex-wrap justify-between bg-indigo-200/10 rounded-md shadow-xl w-full  ">
+                        <div className="flex flex-wrap justify-start bg-indigo-200/10 rounded-md shadow-xl w-full  ">
                             {favorites.map((book) =>
                                 <SideBar key={book.id} data={book} onRemove={removeBook} />)
                             }
@@ -80,7 +81,8 @@ function BooksPage() {
                     }
                 </div>
             }
-            <div className='w-full  mx-auto grid grid-cols-1 sm:grid-cols-2  xl:grid-cols-5 p-3 justify-center '>
+          </div>
+            <div className='w-full mt-5  mx-auto grid grid-cols-1 sm:grid-cols-2  xl:grid-cols-5 p-3 justify-center '>
                 {books.map((book) => (
                     <BookCard key={book.id}
                         booksData={book}

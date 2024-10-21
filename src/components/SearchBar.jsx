@@ -3,6 +3,9 @@ import { IoSearch } from "react-icons/io5";
 function SearchBar({ search, setSearch, searchHandler }) {
     return (
         <div className='flex items-center gap-x-2'>
+            <button onClick={searchHandler}>
+                <IoSearch className='text-3xl text-white'/>
+            </button>
             <input
                 className='p-1 outline-none rounded'
                 type='text'
@@ -10,11 +13,6 @@ function SearchBar({ search, setSearch, searchHandler }) {
                 value={search}
                 onChange={(e) => setSearch(e.target.value.toLocaleLowerCase().trim())}
             />
-            <button onClick={searchHandler}
-            
-            >
-                <IoSearch className='text-3xl text-white'/>
-            </button>
         </div>
     )
 }
