@@ -57,11 +57,11 @@ function BooksPage() {
     return (
         <>
           <div className='  mt-4'>
-              <div className='flex justify-between items-center'>
+              <div className='flex justify-between  items-center'>
                 <button
                     onClick={openHandler}
-                    className='flex items-center gap-x-2 text-white text-lg '>
-                    <FaHeart className={`${isOpen ? "text-red-600" : "text-white"} text-3xl `} />
+                    className='flex items-center gap-x-2 text-text text-lg '>
+                    <FaHeart className={`${isOpen ? "text-secondary" : "text-muted"} text-3xl `} />
                     Favorites
                 </button>
                 <SearchBar 
@@ -73,7 +73,7 @@ function BooksPage() {
                 <div className='my-5'>
                     {
                         !!favorites.length &&
-                        <div className="flex flex-wrap justify-start bg-indigo-200/10 rounded-md shadow-xl w-full  ">
+                        <div className="w-[78%] mx-auto flex flex-wrap justify-center bg-primary rounded-md shadow-xl ">
                             {favorites.map((book) =>
                                 <SideBar key={book.id} data={book} onRemove={removeBook} />)
                             }
