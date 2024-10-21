@@ -9,7 +9,7 @@ function SideBar({ data, onRemove }) {
     }
 
     return (
-        <div className='text-center m-3  rounded-md'>
+        <div className='text-center m-3  p-1  rounded-md'>
             <button
                 onClick={deleteHandler}
                 className=' rounded-full  bg-red-600 text-white mb-2 hover:bg-red-500 transition-all ease-in-out'>
