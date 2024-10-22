@@ -4,6 +4,7 @@ import { booksList } from '../constants/booksData'
 import SideBar from './SideBar'
 import { FaHeart } from "react-icons/fa";
 import SearchBar from './SearchBar';
+import { motion } from "react-magic-motion";
 
 function BooksPage() {
     const [books,setBooks] = useState(booksList)
@@ -55,7 +56,7 @@ function BooksPage() {
         }
     }
     return (
-        <>
+        < >
           <div className='  mt-4'>
               <div className='flex justify-between  items-center'>
                 <button
